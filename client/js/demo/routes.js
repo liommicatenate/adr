@@ -39,6 +39,13 @@ angular
       label: 'Buttons'
     }
   })
+  .state('app.components.new-components', {
+      url: '/new-components',
+      templateUrl: 'views/components/new-components.html',
+      ncyBreadcrumb: {
+          label: 'New Components'
+      }
+  })
   .state('app.components.social-buttons', {
     url: '/social-buttons',
     templateUrl: 'views/components/social-buttons.html',
