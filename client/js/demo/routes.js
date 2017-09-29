@@ -66,28 +66,28 @@ angular
       })
 
       //Investigation
-      // .state('app.investigation', {
-      //   url: "/investigation",
-      //   abstract: true,
-      //   template: '<ui-view></ui-view>',
-      //   ncyBreadcrumb: {
-      //     label: 'Investigation'
-      //   }
-      // })
-      // .state('app.investigation.investigation', {
-      //   url: '/investigation',
-      //   templateUrl: 'views/investigation/investigation.html',
-      //   ncyBreadcrumb: {
-      //     label: 'Investigation'
-      //   }
-      // })
-      // .state('app.investigation.create', {
-      //   url: '/create',
-      //   templateUrl: 'views/investigation/createinvestigation.html',
-      //   ncyBreadcrumb: {
-      //     label: 'Create Investigation'
-      //   }
-      // })
+      .state('app.investigation', {
+        url: "/investigation",
+        abstract: true,
+        template: '<ui-view></ui-view>',
+        ncyBreadcrumb: {
+          label: 'Investigation'
+        }
+      })
+      .state('app.investigation.investigation', {
+        url: '/investigation',
+        templateUrl: 'views/investigation/investigation.html',
+        ncyBreadcrumb: {
+          label: 'Investigation'
+        }
+      })
+      .state('app.investigation.create', {
+        url: '/create',
+        templateUrl: 'views/investigation/createinvestigation.html',
+        ncyBreadcrumb: {
+          label: 'Create Investigation'
+        }
+      })
 
       // ADR routes - end
 
