@@ -9,6 +9,62 @@
             <li class="nav-title">
                 UI Elements
             </li>
+            <!-- ADR menu - start -->
+            <!-- GSR -->
+            <!--<li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.gsr')}">-->
+                <!--<a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.gsr')}" href="#"><i class="icon-puzzle"></i>GSR</a>-->
+                <!--<ul class="nav-dropdown-items">-->
+                    <!--<li class="nav-item">-->
+                        <!--<a class="nav-link" ui-sref-active="active" ui-sref="app.gsr.gsr"><i class="icon-puzzle"></i>GSR</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+
+            <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.gsr')}">
+                <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.gsr')}" href="#"><i class="icon-puzzle"></i>GSR</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.gsr.gsr"><i class="icon-puzzle"></i>GSR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.gsr.create"><i class="icon-puzzle"></i>Crea GSR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.gsr.assign"><i class="icon-puzzle"></i>Assegna GSR</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Occurrence -->
+            <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.occurrence')}">
+                <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.occurrence')}" href="#"><i class="icon-puzzle"></i>Occurrence</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.occurrence.occurrence"><i class="icon-puzzle"></i>Occurrence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.occurrence.create"><i class="icon-puzzle"></i>Crea Occurrence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.occurrence.assign"><i class="icon-puzzle"></i>Assegna Occurrence</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Investigation -->
+            <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
+                <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.components')}" href="#"><i class="icon-puzzle"></i>Investigation</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.buttons"><i class="icon-puzzle"></i>Investigation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.social-buttons"><i class="icon-puzzle"></i>Crea Investigation</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- ADR menu - end -->
+
             <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
                 <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.components')}" href="#"><i class="icon-puzzle"></i> Components</a>
                 <ul class="nav-dropdown-items">
