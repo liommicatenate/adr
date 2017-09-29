@@ -1,0 +1,23 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+client/platforms/
+client/plugins/
+client/node_modules/
+client/bower_components/
+
+######################
+# Intellij
+######################
+client/.idea/**
+client/*.iml
+client/*.iws
+client/*.ipr
+client/*.ids
+client/*.orig
+
+######################
+# Mac OSX
+######################
+.DS_Store
+.svn
