@@ -17,6 +17,14 @@ angular
         templateUrl: 'views/gsr/gsr.html',
         ncyBreadcrumb: {
           label: 'GSR'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/gsr/gsr.js']
+            });
+          }]
         }
       })
       .state('app.gsr.create', {
@@ -24,6 +32,14 @@ angular
         templateUrl: 'views/gsr/creategsr.html',
         ncyBreadcrumb: {
           label: 'Create GSR'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/gsr/creategsr.js']
+            });
+          }]
         }
       })
       .state('app.gsr.assign', {
@@ -31,6 +47,14 @@ angular
         templateUrl: 'views/gsr/assigngsr.html',
         ncyBreadcrumb: {
           label: 'Assign GSR'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/gsr/assigngsr.js']
+            });
+          }]
         }
       })
 
@@ -48,6 +72,14 @@ angular
         templateUrl: 'views/occurrence/occurrence.html',
         ncyBreadcrumb: {
           label: 'Occurrence'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/occurrence/occurrence.js']
+            });
+          }]
         }
       })
       .state('app.occurrence.create', {
@@ -55,6 +87,14 @@ angular
         templateUrl: 'views/occurrence/createoccurrence.html',
         ncyBreadcrumb: {
           label: 'Create Occurrence'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/occurrence/createoccurrence.js']
+            });
+          }]
         }
       })
       .state('app.occurrence.assign', {
@@ -62,6 +102,14 @@ angular
         templateUrl: 'views/occurrence/assignoccurrence.html',
         ncyBreadcrumb: {
           label: 'Assign Occurrence'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/occurrence/assignoccurrence.js']
+            });
+          }]
         }
       })
 
@@ -79,6 +127,14 @@ angular
         templateUrl: 'views/investigation/investigation.html',
         ncyBreadcrumb: {
           label: 'Investigation'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/investigation/investigation.js']
+            });
+          }]
         }
       })
       .state('app.investigation.create', {
@@ -86,6 +142,14 @@ angular
         templateUrl: 'views/investigation/createinvestigation.html',
         ncyBreadcrumb: {
           label: 'Create Investigation'
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            // you can lazy load files for an existing module
+            return $ocLazyLoad.load({
+              files: ['js/controllers/investigation/createinvestigation.js']
+            });
+          }]
         }
       })
 
