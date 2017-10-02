@@ -1,265 +1,1186 @@
-<div class="animated fadeIn" ng-controller="GsrCtrl">
-    <div class="row">
+<div class="animated fadeIn">
+    <div class="row" style="width:100%">
 
-        <div class="col-md-6">
-
-            <div class="card">
-                <div class="card-header">
-                    <strong>Options</strong>
-                </div>
-                <div class="card-block">
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button type="button" class="btn btn-primary">Primary</button>
-
-                    <!-- Secondary, outline button -->
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-
-                    <!-- Indicates a successful or positive action -->
-                    <button type="button" class="btn btn-success">Success</button>
-
-                    <!-- Indicates caution should be taken with this action -->
-                    <button type="button" class="btn btn-warning">Warning</button>
-
-                    <!-- Indicates a dangerous or potentially negative action -->
-                    <button type="button" class="btn btn-danger">Danger</button>
-
-                    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-                    <button type="button" class="btn btn-link">Link</button>
-                </div>
-            </div>
+        <!--<div class="col-sm-12">-->
+        <div style="width:100%">
 
             <div class="card">
                 <div class="card-header">
-                    <strong>With Icons</strong>
+                    <!--<strong>Company</strong>-->
+                    <!--<small>Form</small>-->
                 </div>
                 <div class="card-block">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Primary</button>
-                    <button type="button" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Secondary</button>
-                    <button type="button" class="btn btn-success"><i class="fa fa-magic"></i>&nbsp; Success</button>
-                    <button type="button" class="btn btn-warning"><i class="fa fa-map-marker"></i>&nbsp; Warning</button>
-                    <button type="button" class="btn btn-danger"><i class="fa fa-rss"></i>&nbsp; Danger</button>
-                    <button type="button" class="btn btn-link"><i class="fa fa-link"></i>&nbsp; Link</button>
-                </div>
-            </div>
+                    <div class="row">
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Size Large</strong>
-                    <small>Add this class
-                        <code>.btn-lg</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-primary btn-lg">Primary</button>
-                    <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
-                    <button type="button" class="btn btn-success btn-lg">Success</button>
-                    <button type="button" class="btn btn-info btn-lg">Info</button>
-                    <button type="button" class="btn btn-warning btn-lg">Warning</button>
-                    <button type="button" class="btn btn-danger btn-lg">Danger</button>
-                    <button type="button" class="btn btn-link btn-lg">Link</button>
-                </div>
-            </div>
+                        <div class="form-group col-sm-4">
+                            <label for="gsr-status">Stato</label>
+                            <select class="form-control" id="gsr-status">
+                                <option>GSR Aperta</option>
+                                <option>GSR Chiusa</option>
+                                <option>CSR In Lavorazione</option>
+                            </select>
+                        </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Size Small</strong>
-                    <small>Add this class
-                        <code>.btn-sm</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-primary btn-sm">Primary</button>
-                    <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
-                    <button type="button" class="btn btn-success btn-sm">Success</button>
-                    <button type="button" class="btn btn-info btn-sm">Info</button>
-                    <button type="button" class="btn btn-warning btn-sm">Warning</button>
-                    <button type="button" class="btn btn-danger btn-sm">Danger</button>
-                    <button type="button" class="btn btn-link btn-sm">Link</button>
-                </div>
-            </div>
+                        <div class="form-group col-sm-4">
+                            <label for="data-evento-dal">Data Evento dal</label>
+                            <div id="data-evento-dal" class="input-group date" data-date-format="dd/MM/yyyy">
+                                <input class="form-control" type="text"/>
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Disabled state</strong>
-                    <small>Add this
-                        <code>disabled="disabled"</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-primary" disabled="disabled">Primary</button>
-                    <button type="button" class="btn btn-secondary" disabled="disabled">Secondary</button>
-                    <button type="button" class="btn btn-success" disabled="disabled">Success</button>
-                    <button type="button" class="btn btn-info" disabled="disabled">Info</button>
-                    <button type="button" class="btn btn-warning" disabled="disabled">Warning</button>
-                    <button type="button" class="btn btn-danger" disabled="disabled">Danger</button>
-                    <button type="button" class="btn btn-link" disabled="disabled">Link</button>
-                </div>
-            </div>
+                            <script>
+                              $(function () {
+                                $("#data-evento-dal").datepicker({
+                                  format: 'dd/mm/yyyy',
+                                  autoclose: true,
+                                  todayHighlight: true
+                                }).datepicker('update', new Date());
+                              });
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Active state</strong>
-                    <small>Add this class
-                        <code>.active</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-primary active">Primary</button>
-                    <button type="button" class="btn btn-secondary active">Secondary</button>
-                    <button type="button" class="btn btn-success active">Success</button>
-                    <button type="button" class="btn btn-info active">Info</button>
-                    <button type="button" class="btn btn-warning active">Warning</button>
-                    <button type="button" class="btn btn-danger active">Danger</button>
-                    <button type="button" class="btn btn-link active">Link</button>
-                </div>
-            </div>
+                            </script>
+                        </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Block Level Buttons</strong>
-                    <small>Add this class
-                        <code>.btn-block</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-success btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-info btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-warning btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-danger btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-link btn-lg btn-block">Block level button</button>
-                </div>
-            </div>
+                        <div class="form-group col-sm-4">
+                            <label for="data-evento-al">Data Evento al</label>
+                            <div id="data-evento-al" class="input-group date" data-date-format="dd/MM/yyyy">
+                                <input class="form-control" type="text"/>
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            </div>
 
-        </div>
-        <!--/.col-->
+                            <script>
+                              $(function () {
+                                $("#data-evento-al").datepicker({
+                                  format: 'dd/mm/yyyy',
+                                  autoclose: true,
+                                  todayHighlight: true
+                                }).datepicker('update', new Date());
+                              });
 
-        <div class="col-md-6">
+                            </script>
+                        </div>
+                    </div>
+                    <!--/.row-->
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Options</strong>
-                </div>
-                <div class="card-block">
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="operatore">Operatore</label>
+                            <select class="form-control" id="operatore">
+                                <option>All</option>
+                                <option>Operatore 1</option>
+                                <option>Operatore 2</option>
+                            </select>
+                        </div>
 
-                    <!-- Secondary, outline button -->
-                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <div class="form-group col-sm-4">
+                            <label for="e-emor">eEmor</label>
+                            <select class="form-control" id="e-emor">
+                                <option>All</option>
+                                <option>Emor 1</option>
+                                <option>Emor 2</option>
+                            </select>
+                        </div>
 
-                    <!-- Indicates a successful or positive action -->
-                    <button type="button" class="btn btn-outline-success">Success</button>
+                    </div>
+                    <!--/.row-->
 
-                    <!-- Indicates caution should be taken with this action -->
-                    <button type="button" class="btn btn-outline-warning">Warning</button>
+                    <div class="row" style="width:100%">
+                        <div class="card" style="width:100%">
+                            <div class="card-header">
+                                <i class="fa fa-align-justify"></i> <!--Striped Table-->
+                            </div>
+                            <div class="card-block">
+                                <table class="table table-striped table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>GSR Code</th>
+                                            <th>Occ Code</th>
+                                            <th>Title</th>
+                                            <th>Local Date & Time</th>
+                                            <th>UTC Date & Time</th>
+                                            <th>Place</th>
+                                            <th>Occ Title</th>
+                                            <th>Send eEMOR</th>
+                                            <th>Risk & Severity</th>
+                                            <th>Creation Date</th>
+                                            <th>User</th>
+                                            <th>State</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>000001</td>
+                                        <td></td>
+                                        <td>bird strike ...</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2017-08-16 18.20.20</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Gsr Aperta</td>
 
-                    <!-- Indicates a dangerous or potentially negative action -->
-                    <button type="button" class="btn btn-outline-danger">Danger</button>
+                                        <!--<td>Yiorgos Avraamu</td>-->
+                                        <!--<td>2012/01/01</td>-->
+                                        <!--<td>Member</td>-->
+                                        <!--<td>-->
+                                            <!--<span class="badge badge-success">Active</span>-->
+                                        <!--</td>-->
+                                    </tr>
+                                    <tr>
+                                        <td>000002</td>
+                                        <td></td>
+                                        <td>airdrome dammage ...</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2017-08-16 18.20.20</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Gsr Aperta</td>
 
-                </div>
-            </div>
+                                        <!--<td>Avram Tarasios</td>-->
+                                        <!--<td>2012/02/01</td>-->
+                                        <!--<td>Staff</td>-->
+                                        <!--<td>-->
+                                            <!--<span class="badge badge-danger">Banned</span>-->
+                                        <!--</td>-->
+                                    </tr>
+                                    <tr>
+                                        <td>000003</td>
+                                        <td></td>
+                                        <td>incursion ...</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td>2017-08-16 12.23.21</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2017-08-16 18.20.20</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Gsr Aperta</td>
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>With Icons</strong>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-outline-primary"><i class="fa fa-star"></i>&nbsp; Primary</button>
-                    <button type="button" class="btn btn-outline-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Secondary</button>
-                    <button type="button" class="btn btn-outline-success"><i class="fa fa-magic"></i>&nbsp; Success</button>
-                    <button type="button" class="btn btn-outline-warning"><i class="fa fa-map-marker"></i>&nbsp; Warning</button>
-                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-rss"></i>&nbsp; Danger</button>
-                </div>
-            </div>
+                                        <!--<td>Quintin Ed</td>-->
+                                        <!--<td>2012/02/01</td>-->
+                                        <!--<td>Admin</td>-->
+                                        <!--<td>-->
+                                            <!--<span class="badge badge-default">Inactive</span>-->
+                                        <!--</td>-->
+                                    </tr>
+                                    <tr>
+                                        <td>000004</td>
+                                        <td></td>
+                                        <td>incursion ...</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2017-08-16 18.20.20</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Gsr Aperta</td>
+                                        
+                                        <!--<td>Enéas Kwadwo</td>-->
+                                        <!--<td>2012/03/01</td>-->
+                                        <!--<td>Member</td>-->
+                                        <!--<td>-->
+                                            <!--<span class="badge badge-warning">Pending</span>-->
+                                        <!--</td>-->
+                                    </tr>
+                                    <tr>
+                                        <td>000005</td>
+                                        <td></td>
+                                        <td>incursion ...</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td>2017-08-16 14.23.21</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2017-08-16 18.20.20</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Gsr Aperta</td>
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Size Large</strong>
-                    <small>Add this class
-                        <code>.btn-lg</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-outline-primary btn-lg">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg">Secondary</button>
-                    <button type="button" class="btn btn-outline-success btn-lg">Success</button>
-                    <button type="button" class="btn btn-outline-info btn-lg">Info</button>
-                    <button type="button" class="btn btn-outline-warning btn-lg">Warning</button>
-                    <button type="button" class="btn btn-outline-danger btn-lg">Danger</button>
-                </div>
-            </div>
+                                        <!--<td>Agapetus Tadeáš</td>-->
+                                        <!--<td>2012/01/21</td>-->
+                                        <!--<td>Staff</td>-->
+                                        <!--<td>-->
+                                            <!--<span class="badge badge-success">Active</span>-->
+                                        <!--</td>-->
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Prev</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
 
-            <div class="card">
-                <div class="card-header">
-                    <strong>Size Small</strong>
-                    <small>Add this class
-                        <code>.btn-sm</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-outline-primary btn-sm">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm">Secondary</button>
-                    <button type="button" class="btn btn-outline-success btn-sm">Success</button>
-                    <button type="button" class="btn btn-outline-info btn-sm">Info</button>
-                    <button type="button" class="btn btn-outline-warning btn-sm">Warning</button>
-                    <button type="button" class="btn btn-outline-danger btn-sm">Danger</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <strong>Disabled state</strong>
-                    <small>Add this
-                        <code>disabled="disabled"</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-outline-primary" disabled="disabled">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary" disabled="disabled">Secondary</button>
-                    <button type="button" class="btn btn-success" disabled="disabled">Success</button>
-                    <button type="button" class="btn btn-outline-info" disabled="disabled">Info</button>
-                    <button type="button" class="btn btn-outline-warning" disabled="disabled">Warning</button>
-                    <button type="button" class="btn btn-outline-danger" disabled="disabled">Danger</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <strong>Active state</strong>
-                    <small>Add this class
-                        <code>.active</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-outline-primary active">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary active">Secondary</button>
-                    <button type="button" class="btn btn-outline-success active">Success</button>
-                    <button type="button" class="btn btn-outline-info active">Info</button>
-                    <button type="button" class="btn btn-outline-warning active">Warning</button>
-                    <button type="button" class="btn btn-outline-danger active">Danger</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <strong>Block Level Buttons</strong>
-                    <small>Add this class
-                        <code>.btn-block</code>
-                    </small>
-                </div>
-                <div class="card-block">
-                    <button type="button" class="btn btn-outline-secondary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-outline-primary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-outline-success btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-outline-info btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-outline-warning btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-outline-danger btn-lg btn-block">Block level button</button>
+                    <!--<div class="form-group">-->
+                    <!--<label for="country">Country</label>-->
+                    <!--<input type="text" class="form-control" id="country" placeholder="Country name">-->
+                    <!--</div>-->
                 </div>
             </div>
 
         </div>
         <!--/.col-->
+
     </div>
     <!--/.row-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Basic Form</strong>Elements-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label">Static</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<p class="form-control-static">Username</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="text-input">Text Input</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="text" id="text-input" name="text-input" class="form-control" placeholder="Text">-->
+    <!--<span class="help-block">This is a help text</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="email-input">Email Input</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="email" id="email-input" name="email-input" class="form-control" placeholder="Enter Email">-->
+    <!--<span class="help-block">Please enter your email</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="password-input">Password</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="password" id="password-input" name="password-input" class="form-control" placeholder="Password">-->
+    <!--<span class="help-block">Please enter a complex password</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="disabled-input">Disabled Input</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="text" id="disabled-input" name="disabled-input" class="form-control" placeholder="Disabled" disabled>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="textarea-input">Textarea</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="select">Select</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<select id="select" name="select" class="form-control">-->
+    <!--<option value="0">Please select</option>-->
+    <!--<option value="1">Option #1</option>-->
+    <!--<option value="2">Option #2</option>-->
+    <!--<option value="3">Option #3</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="select">Select Large</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<select id="select" name="select" class="form-control form-control-lg">-->
+    <!--<option value="0">Please select</option>-->
+    <!--<option value="1">Option #1</option>-->
+    <!--<option value="2">Option #2</option>-->
+    <!--<option value="3">Option #3</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="select">Select Small</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<select id="select" name="select" class="form-control form-control-sm">-->
+    <!--<option value="0">Please select</option>-->
+    <!--<option value="1">Option #1</option>-->
+    <!--<option value="2">Option #2</option>-->
+    <!--<option value="3">Option #3</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="select">Disabled Select</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<select id="disabledSelect" class="form-control" disabled>-->
+    <!--<option value="0">Please select</option>-->
+    <!--<option value="1">Option #1</option>-->
+    <!--<option value="2">Option #2</option>-->
+    <!--<option value="3">Option #3</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="multiple-select">Multiple select</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<select id="multiple-select" name="multiple-select" class="form-control" size="5" multiple>-->
+    <!--<option value="1">Option #1</option>-->
+    <!--<option value="2">Option #2</option>-->
+    <!--<option value="3">Option #3</option>-->
+    <!--<option value="4">Option #4</option>-->
+    <!--<option value="5">Option #5</option>-->
+    <!--<option value="6">Option #6</option>-->
+    <!--<option value="7">Option #7</option>-->
+    <!--<option value="8">Option #8</option>-->
+    <!--<option value="9">Option #9</option>-->
+    <!--<option value="10">Option #10</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label">Radios</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<div class="radio">-->
+    <!--<label for="radio1">-->
+    <!--<input type="radio" id="radio1" name="radios" value="option1">Option 1-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--<div class="radio">-->
+    <!--<label for="radio2">-->
+    <!--<input type="radio" id="radio2" name="radios" value="option2">Option 2-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--<div class="radio">-->
+    <!--<label for="radio3">-->
+    <!--<input type="radio" id="radio3" name="radios" value="option3">Option 3-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label">Inline Radios</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<label class="radio-inline" for="inline-radio1">-->
+    <!--<input type="radio" id="inline-radio1" name="inline-radios" value="option1">One-->
+    <!--</label>-->
+    <!--<label class="radio-inline" for="inline-radio2">-->
+    <!--<input type="radio" id="inline-radio2" name="inline-radios" value="option2">Two-->
+    <!--</label>-->
+    <!--<label class="radio-inline" for="inline-radio3">-->
+    <!--<input type="radio" id="inline-radio3" name="inline-radios" value="option3">Three-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label">Checkboxes</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<div class="checkbox">-->
+    <!--<label for="checkbox1">-->
+    <!--<input type="checkbox" id="checkbox1" name="checkbox1" value="option1">Option 1-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--<div class="checkbox">-->
+    <!--<label for="checkbox2">-->
+    <!--<input type="checkbox" id="checkbox2" name="checkbox2" value="option2">Option 2-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--<div class="checkbox">-->
+    <!--<label for="checkbox3">-->
+    <!--<input type="checkbox" id="checkbox3" name="checkbox3" value="option3">Option 3-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label">Inline Checkboxes</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<label class="checkbox-inline" for="inline-checkbox1">-->
+    <!--<input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1">One-->
+    <!--</label>-->
+    <!--<label class="checkbox-inline" for="inline-checkbox2">-->
+    <!--<input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2">Two-->
+    <!--</label>-->
+    <!--<label class="checkbox-inline" for="inline-checkbox3">-->
+    <!--<input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3">Three-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="file-input">File input</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="file" id="file-input" name="file-input">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="file-multiple-input">Multiple File input</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="file" id="file-multiple-input" name="file-multiple-input" multiple>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Inline</strong>Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-inline">-->
+    <!--<div class="form-group">-->
+    <!--<label class="sr-only" for="if-email">Email</label>-->
+    <!--<input type="email" id="if-email" name="if-email" class="form-control" placeholder="Enter Email..">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="sr-only" for="if-password">Password</label>-->
+    <!--<input type="password" id="if-password" name="if-password" class="form-control" placeholder="Enter Password..">-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Horizontal</strong>Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="hf-email">Email</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="email" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email..">-->
+    <!--<span class="help-block">Please enter your email</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-md-3 form-control-label" for="hf-password">Password</label>-->
+    <!--<div class="col-md-9">-->
+    <!--<input type="password" id="hf-password" name="hf-password" class="form-control" placeholder="Enter Password..">-->
+    <!--<span class="help-block">Please enter your password</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Normal</strong>Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post">-->
+    <!--<div class="form-group">-->
+    <!--<label for="nf-email">Email</label>-->
+    <!--<input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Enter Email..">-->
+    <!--<span class="help-block">Please enter your email</span>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label for="nf-password">Password</label>-->
+    <!--<input type="password" id="nf-password" name="nf-password" class="form-control" placeholder="Enter Password..">-->
+    <!--<span class="help-block">Please enter your password</span>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Input-->
+    <!--<strong>Grid</strong>-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-3">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-3">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-4">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-4">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-5">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-5">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-6">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-6">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-7">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-7">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-8">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-8">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-9">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-9">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-10">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-10">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-11">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-11">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-sm-12">-->
+    <!--<input type="text" class="form-control" placeholder=".col-sm-12">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-user"></i> Login</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Input-->
+    <!--<strong>Sizes</strong>-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-sm-5 form-control-label" for="input-small">Small Input</label>-->
+    <!--<div class="col-sm-6">-->
+    <!--<input type="text" id="input-small" name="input-small" class="form-control form-control-sm" placeholder=".form-control-sm">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-sm-5 form-control-label" for="input-normal">Normal Input</label>-->
+    <!--<div class="col-sm-6">-->
+    <!--<input type="text" id="input-normal" name="input-normal" class="form-control" placeholder="Normal">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<label class="col-sm-5 form-control-label" for="input-large">Large Input</label>-->
+    <!--<div class="col-sm-6">-->
+    <!--<input type="text" id="input-large" name="input-large" class="form-control form-control-lg" placeholder=".form-control-lg">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.col&ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.row&ndash;&gt;-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-sm-6">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Validation states</strong>Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<div class="form-group has-success">-->
+    <!--<label class="form-form-control-label" for="inputSuccess1">Input with success</label>-->
+    <!--<input type="text" class="form-control" id="inputSuccess1">-->
+    <!--</div>-->
+    <!--<div class="form-group has-warning">-->
+    <!--<label class="form-form-control-label" for="inputWarning1">Input with warning</label>-->
+    <!--<input type="text" class="form-control" id="inputWarning1">-->
+    <!--</div>-->
+    <!--<div class="form-group has-danger">-->
+    <!--<label class="form-form-control-label" for="inputError1">Input with error</label>-->
+    <!--<input type="text" class="form-control" id="inputError1">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.col&ndash;&gt;-->
+    <!--<div class="col-sm-6">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Validation states</strong>with optional icons-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<div class="form-group has-success">-->
+    <!--<label class="form-form-control-label" for="inputSuccess2">Input with success</label>-->
+    <!--<input type="text" class="form-control form-control-success" id="inputSuccess2">-->
+    <!--</div>-->
+    <!--<div class="form-group has-warning">-->
+    <!--<label class="form-form-control-label" for="inputWarning2">Input with warning</label>-->
+    <!--<input type="text" class="form-control form-control-warning" id="inputWarning2">-->
+    <!--</div>-->
+    <!--<div class="form-group has-danger has-feedback">-->
+    <!--<label class="form-form-control-label" for="inputError2">Input with error</label>-->
+    <!--<input type="text" class="form-control form-control-danger" id="inputError2">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.col&ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-sm-4">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Icon/Text</strong>Groups-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon"><i class="fa fa-user"></i>-->
+    <!--</span>-->
+    <!--<input type="text" id="input1-group1" name="input1-group1" class="form-control" placeholder="Username">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<input type="email" id="input2-group1" name="input2-group1" class="form-control" placeholder="Email">-->
+    <!--<span class="input-group-addon"><i class="fa fa-envelope-o"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon"><i class="fa fa-euro"></i>-->
+    <!--</span>-->
+    <!--<input type="text" id="input3-group1" name="input3-group1" class="form-control" placeholder="..">-->
+    <!--<span class="input-group-addon">.00</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-4">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Buttons</strong>Groups-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>-->
+    <!--</span>-->
+    <!--<input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Username">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<input type="email" id="input2-group2" name="input2-group2" class="form-control" placeholder="Email">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary">Submit</button>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i>-->
+    <!--</button>-->
+    <!--</span>-->
+    <!--<input type="text" id="input3-group2" name="input3-group2" class="form-control" placeholder="Search">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary"><i class="fa fa-twitter"></i>-->
+    <!--</button>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-4">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<strong>Dropdowns</strong>Groups-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<div class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action-->
+    <!--<span class="caret"></span>-->
+    <!--</button>-->
+    <!--<ul class="dropdown-menu">-->
+    <!--<li><a href="javascript:void(0)">Action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Another action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Something else here</a>-->
+    <!--</li>-->
+    <!--<li class="divider"></li>-->
+    <!--<li><a href="javascript:void(0)">Separated link</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--<input type="text" id="input1-group3" name="input1-group3" class="form-control" placeholder="Username">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<input type="email" id="input2-group3" name="input2-group3" class="form-control" placeholder="Email">-->
+    <!--<div class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action-->
+    <!--<span class="caret"></span>-->
+    <!--</button>-->
+    <!--<ul class="dropdown-menu dropdown-menu-right">-->
+    <!--<li><a href="javascript:void(0)">Action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Another action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Something else here</a>-->
+    <!--</li>-->
+    <!--<li class="divider"></li>-->
+    <!--<li><a href="javascript:void(0)">Separated link</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-12">-->
+    <!--<div class="input-group">-->
+    <!--<div class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary">Action</button>-->
+    <!--<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">-->
+    <!--<span class="caret"></span>-->
+    <!--</button>-->
+    <!--<ul class="dropdown-menu">-->
+    <!--<li><a href="javascript:void(0)">Action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Another action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Something else here</a>-->
+    <!--</li>-->
+    <!--<li class="divider"></li>-->
+    <!--<li><a href="javascript:void(0)">Separated link</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--<input type="text" id="input3-group3" name="input3-group3" class="form-control" placeholder="..">-->
+    <!--<div class="input-group-btn">-->
+    <!--<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">-->
+    <!--<span class="caret"></span>-->
+    <!--</button>-->
+    <!--<ul class="dropdown-menu dropdown-menu-right">-->
+    <!--<li><a href="javascript:void(0)">Action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Another action</a>-->
+    <!--</li>-->
+    <!--<li><a href="javascript:void(0)">Something else here</a>-->
+    <!--</li>-->
+    <!--<li class="divider"></li>-->
+    <!--<li><a href="javascript:void(0)">Separated link</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+    <!--<button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Use the grid for big devices!-->
+    <!--<small>-->
+    <!--<code>.col-lg-*</code>-->
+    <!--<code>.col-md-*</code>-->
+    <!--<code>.col-sm-*</code>-->
+    <!--</small>-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-8">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-8">-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-4">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-7">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-7">-->
+    <!--</div>-->
+    <!--<div class="col-md-5">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-5">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-6">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-6">-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-6">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-5">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-5">-->
+    <!--</div>-->
+    <!--<div class="col-md-7">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-7">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-md-4">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-4">-->
+    <!--</div>-->
+    <!--<div class="col-md-8">-->
+    <!--<input type="text" class="form-control" placeholder=".col-md-8">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-danger">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-warning">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-info">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-success">Action</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Input Grid for small devices!-->
+    <!--<small>-->
+    <!--<code>.col-*</code>-->
+    <!--</small>-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post" class="form-horizontal">-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-4">-->
+    <!--<input type="text" class="form-control" placeholder=".col-4">-->
+    <!--</div>-->
+    <!--<div class="col-8">-->
+    <!--<input type="text" class="form-control" placeholder=".col-8">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-5">-->
+    <!--<input type="text" class="form-control" placeholder=".col-5">-->
+    <!--</div>-->
+    <!--<div class="col-7">-->
+    <!--<input type="text" class="form-control" placeholder=".col-7">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-6">-->
+    <!--<input type="text" class="form-control" placeholder=".col-6">-->
+    <!--</div>-->
+    <!--<div class="col-6">-->
+    <!--<input type="text" class="form-control" placeholder=".col-6">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-7">-->
+    <!--<input type="text" class="form-control" placeholder=".col-5">-->
+    <!--</div>-->
+    <!--<div class="col-5">-->
+    <!--<input type="text" class="form-control" placeholder=".col-5">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group row">-->
+    <!--<div class="col-8">-->
+    <!--<input type="text" class="form-control" placeholder=".col-8">-->
+    <!--</div>-->
+    <!--<div class="col-4">-->
+    <!--<input type="text" class="form-control" placeholder=".col-4">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-danger">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-warning">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-info">Action</button>-->
+    <!--<button type="button" class="btn btn-sm btn-success">Action</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-sm-4">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Example Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post">-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon">Username</span>-->
+    <!--<input type="text" id="username3" name="username3" class="form-control">-->
+    <!--<span class="input-group-addon"><i class="fa fa-user"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon">Email</span>-->
+    <!--<input type="email" id="email3" name="email3" class="form-control">-->
+    <!--<span class="input-group-addon"><i class="fa fa-envelope"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon">Password</span>-->
+    <!--<input type="password" id="password3" name="password3" class="form-control">-->
+    <!--<span class="input-group-addon"><i class="fa fa-asterisk"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group form-actions">-->
+    <!--<button type="submit" class="btn btn-sm btn-primary">Submit</button>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-4">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Example Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post">-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<input type="text" id="username2" name="username2" class="form-control" placeholder="Username">-->
+    <!--<span class="input-group-addon"><i class="fa fa-user"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<input type="email" id="email2" name="email2" class="form-control" placeholder="Email">-->
+    <!--<span class="input-group-addon"><i class="fa fa-envelope"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<input type="password" id="password2" name="password2" class="form-control" placeholder="Password">-->
+    <!--<span class="input-group-addon"><i class="fa fa-asterisk"></i>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group form-actions">-->
+    <!--<button type="submit" class="btn btn-sm btn-default">Submit</button>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-4">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--Example Form-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form action="" method="post">-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon"><i class="fa fa-user"></i>-->
+    <!--</span>-->
+    <!--<input type="text" id="username" name="username" class="form-control" placeholder="Username">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon"><i class="fa fa-envelope"></i>-->
+    <!--</span>-->
+    <!--<input type="email" id="email" name="email" class="form-control" placeholder="Email">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<div class="input-group">-->
+    <!--<span class="input-group-addon"><i class="fa fa-asterisk"></i>-->
+    <!--</span>-->
+    <!--<input type="password" id="password" name="password" class="form-control" placeholder="Password">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group form-actions">-->
+    <!--<button type="submit" class="btn btn-sm btn-success">Submit</button>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.row&ndash;&gt;-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-lg-12">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<i class="fa fa-edit"></i>Form Elements-->
+    <!--<div class="card-actions">-->
+    <!--<a href="#" class="btn-setting"><i class="icon-settings"></i></a>-->
+    <!--<a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>-->
+    <!--<a href="#" class="btn-close"><i class="icon-close"></i></a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card-block">-->
+    <!--<form class="form-2orizontal">-->
+    <!--<div class="form-group">-->
+    <!--<label class="form-control-label" for="prependedInput">Prepended text</label>-->
+    <!--<div class="controls">-->
+    <!--<div class="input-prepend input-group">-->
+    <!--<span class="input-group-addon">@</span>-->
+    <!--<input id="prependedInput" class="form-control" size="16" type="text">-->
+    <!--</div>-->
+    <!--<p class="help-block">Here's some help text</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="form-control-label" for="appendedInput">Appended text</label>-->
+    <!--<div class="controls">-->
+    <!--<div class="input-group">-->
+    <!--<input id="appendedInput" class="form-control" size="16" type="text">-->
+    <!--<span class="input-group-addon">.00</span>-->
+    <!--</div>-->
+    <!--<span class="help-block">Here's more help text</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="form-control-label" for="appendedPrependedInput">Append and prepend</label>-->
+    <!--<div class="controls">-->
+    <!--<div class="input-prepend input-group">-->
+    <!--<span class="input-group-addon">$</span>-->
+    <!--<input id="appendedPrependedInput" class="form-control" size="16" type="text">-->
+    <!--<span class="input-group-addon">.00</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="form-control-label" for="appendedInputButton">Append with button</label>-->
+    <!--<div class="controls">-->
+    <!--<div class="input-group">-->
+    <!--<input id="appendedInputButton" class="form-control" size="16" type="text">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button class="btn btn-default" type="button">Go!</button>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="form-control-label" for="appendedInputButtons">Two-button append</label>-->
+    <!--<div class="controls">-->
+    <!--<div class="input-group">-->
+    <!--<input id="appendedInputButtons" size="16" class="form-control" type="text">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button class="btn btn-default" type="button">Search</button>-->
+    <!--<button class="btn btn-default" type="button">Options</button>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-actions">-->
+    <!--<button type="submit" class="btn btn-primary">Save changes</button>-->
+    <!--<button class="btn btn-default" type="button">Cancel</button>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.col&ndash;&gt;-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;/.row&ndash;&gt;-->
 </div>

@@ -657,6 +657,11 @@ mark,
   font-size: 90%;
   color: #b0bec5; }
 
+.table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
 code,
 kbd,
 pre,
